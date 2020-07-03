@@ -1,0 +1,83 @@
+[alias]                               
+
+                co = checkout                               
+
+                cob = checkout -b                               
+
+                coo = !git fetch && git checkout                               
+
+                br = branch                               
+
+                brd = branch -d                               
+
+                brD = branch -D                                
+
+                merged = branch --merged                               
+
+                st = status                               
+
+                aa = add -A .                               
+
+                cm = commit -m                               
+
+                aacm = !git add -A . && git commit -m                                
+
+                cp = cherry-pick                               
+
+                amend = commit --amend -m
+
+                amendn = commit --amend --no-edit
+
+               unstage = reset --soft HEAD^                               
+
+                ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --date=format:'%m-%d-%Y %H:%M:%S' --decorate                             
+
+                ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat                               
+
+                f = "!git ls-files | grep -i"                               
+
+                gr = grep -Ii                               
+
+                la = "!git config -l | grep alias | cut -c 7-"                       
+
+ 
+
+                    # one-line log
+
+    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+    a = add
+
+    ap = add -p
+
+    c = commit --verbose
+
+    ca = commit -a --verbose
+
+    cm = commit -m
+
+    cam = commit -a -m
+
+    m = commit --amend --verbose
+
+    d = diff
+
+    ds = diff --stat
+
+    dc = diff --cached
+
+    s = status -s
+
+    co = checkout
+
+    cob = checkout -b
+
+                bru = "remote update origin --prune"
+
+    # list branches sorted by last modified
+
+    b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+    # list aliases
+
+    la = "!git config -l | grep alias | cut -c 7-"
